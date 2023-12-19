@@ -7,7 +7,7 @@ module.exports = {
       console.log('====================================');
       console.log(data);
       console.log('====================================');
-      res.send("Server Working");
+      res.send(data);
     } catch (error) {
       console.error(error);
       res.status(500).send("Internal Server Error");

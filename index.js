@@ -8,7 +8,7 @@ var PORT = process.env.PORT
 require('./Config/Database')
 
 // allow origin to access the data
-app.use(cors({ origin: "http://localhost:4200" }));
+app.use(cors({ origin: "*" }));
 
 // allow header
 app.use(function (req, res, next) {
@@ -35,4 +35,7 @@ app.use('/api', approute);
 app.listen(PORT, function (error) {
    if (error) throw error
    console.log(" Server Up Successfully on PORT :" + PORT)
+   console.log('====================================');
+   console.log("http://localhost:8080");
+   console.log('====================================');
 })
