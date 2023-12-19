@@ -1,10 +1,11 @@
+require('dotenv').config()
 const express = require("express")
 const app = express();
 var router = express.Router();
 const cors = require('cors');
 const approute = require('./Routes/appRoutes')(router);
-var PORT = process.env.port || 8080
-
+var PORT = process.env.PORT 
+require('./Config/Database')
 
 // allow origin to access the data
 app.use(cors({ origin: "http://localhost:4200" }));
